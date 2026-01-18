@@ -11,8 +11,8 @@ The script calculates the ratio of SPX to Gold and compares it against a 200-wee
 1.  **Ratio Calculation:** `S&P 500 Close / Gold Close`
 2.  **Trend Baseline:** 200-week SMA of the ratio.
 3.  **Regime Detection:**
-    * **Regime 1 (Ratio High):** The ratio must close above the 200 SMA for **30 consecutive weeks**. This indicates the S&P 500 is historically expensive relative to Gold.
-    * **Regime -1 (Ratio Low):** The ratio must close below the 200 SMA for **30 consecutive weeks**. This indicates the S&P 500 is historically cheap relative to Gold.
+    * **Regime 1 (Ratio High):** The ratio must close above the 200 SMA for **30 consecutive weeks**. This indicates Equities are historically expensive relative to Gold.
+    * **Regime -1 (Ratio Low):** The ratio must close below the 200 SMA for **30 consecutive weeks**. This indicates Equities are historically cheap relative to Gold.
 
 ## Visuals and Signals
 
@@ -22,9 +22,9 @@ The indicator displays data using background coloring and a dashboard table in t
 * **Recommended DCA: GOLD**
     * Triggered when the ratio is in **Regime 1** (extended above the 200 SMA).
     * Interpretation: Equities are overvalued relative to commodities; capital is rotated into Gold.
-* **Recommended DCA: S&P 500**
+* **Recommended DCA: Equities**
     * Triggered when the ratio is in **Regime -1** (extended below the 200 SMA).
-    * Interpretation: Equities are undervalued relative to commodities; capital is rotated into the S&P 500.
+    * Interpretation: Equities are undervalued relative to commodities; capital is rotated into Equities.
 
 ### 2. Background Color Coding
 * **Yellow Background:** Corresponds to Regime 1 (DCA Gold).
