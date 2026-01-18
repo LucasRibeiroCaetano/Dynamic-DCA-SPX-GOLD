@@ -1,5 +1,5 @@
 //@version=5
-indicator("Dynamic DCA SPX/GOLD", overlay=true)
+indicator("Dynamic DCA Equities/Gold", overlay=true)
 
 // Function to calculate regime based on Close vs SMA200
 calc_regime() =>
@@ -31,11 +31,11 @@ targetTicker = "SP:SPX/TVC:GOLD"
 [weeklyClose, sma200w, regime] = request.security(targetTicker, "W", calc_regime())
 
 // Set background color based on regime
-bgcolor(regime == 1 ? color.new(color.blue, 90) : color.new(color.yellow, 90))
+bgcolor(regime == 1 ? color.new(color.yellow, 90) : color.new(color.blue, 90))
 
 var table dcaTable = table.new(position.bottom_right, 1, 1, border_width=1)
 
 // Display recommendation
 // If Ratio > SMA200 (Regime 1) -> Gold is cheap relative to SPX
 // If Ratio < SMA200 (Regime -1) -> SPX is cheap relative to Gold
-table.cell(dcaTable, 0, 0, regime == 1 ? "Recommended DCA:\nGOLD" : "Recommended DCA:\nS&P 500", text_color=color.white, bgcolor=regime == 1 ? color.new(color.orange, 0) : color.new(color.blue, 0), text_size=size.large)
+table.cell(dcaTable, 0, 0, regime == 1 ? "Recommended DCA:\nGOLD" : "Recommended DCA:\nEquities", text_color=color.white, bgcolor=regime == 1 ? color.new(color.orange, 0) : color.new(color.blue, 0), text_size=size.large)
