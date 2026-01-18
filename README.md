@@ -1,7 +1,7 @@
-# Dynamic DCA SPX/GOLD Indicator
+# Dynamic DCA Equities/Gold Indicator
 
 ## Overview
-This Pine Script indicator provides a long-term Dollar Cost Averaging (DCA) strategy based on the relative valuation of the S&P 500 (SPX) against Gold.
+This Pine Script indicator provides a long-term Dollar Cost Averaging (DCA) strategy based on the relative valuation of Equities against Gold.
 
 It operates independently of the chart currently being viewed. It forces a request for the ratio `SP:SPX/TVC:GOLD` on the Weekly timeframe to determine the current macro regime.
 
@@ -28,7 +28,7 @@ The indicator displays data using background coloring and a dashboard table in t
 
 ### 2. Background Color Coding
 * **Yellow Background:** Corresponds to Regime 1 (DCA Gold).
-* **Blue Background:** Corresponds to Regime -1 (DCA S&P 500).
+* **Blue Background:** Corresponds to Regime -1 (DCA Equities).
 
 ## Technical Implementation Details
 * **`request.security`:** Hardcoded to `SP:SPX/TVC:GOLD` with a resolution of `"W"`. This allows you to add the script to any chart (e.g., BTCUSD or AAPL) and still see the macro SPX/GOLD status.
